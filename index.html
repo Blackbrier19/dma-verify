@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Marine Administration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #333333;
+      background-color: #f4f6f9 !important;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Custom Original Navbar Header Styling */
+    .custom-navbar {
+      background-color: #1a1a1a !important;
+      border: none !important;
+      border-radius: 0 !important;
+      margin-bottom: 0 !important;
+      min-height: 50px;
+    }
+
+    .custom-navbar .navbar-brand {
+      color: #ffffff !important;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 15px 15px;
+      height: auto;
+      white-space: normal;
+      word-break: break-word;
+      max-width: 80%;
+      display: inline-block;
+    }
+
+    .custom-navbar .navbar-toggle {
+      border-color: #444 !important;
+      margin-right: 15px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      background-color: transparent;
+    }
+
+    .custom-navbar .navbar-toggle .icon-bar {
+      background-color: #ffffff !important;
+      width: 22px;
+      height: 2px;
+    }
+
+    .custom-navbar .navbar-nav > li > a {
+      color: #cccccc !important;
+      font-size: 14px;
+      padding: 12px 20px;
+    }
+
+    .custom-navbar .navbar-nav > li > a:hover,
+    .custom-navbar .navbar-nav > li > a:focus {
+      color: #ffffff !important;
+      background-color: #333333 !important;
+    }
+
+    /* Top Verification Area */
+    .verification-section {
+      background-color: transparent !important;
+      padding: 20px 15px 10px 15px;
+    }
+
+    .fontSize2 {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 8px;
+      color: #333333;
+    }
+
+    .fontSize3 {
+      font-size: 16px;
+      font-weight: 300;
+      color: #555555;
+      margin-bottom: 25px;
+    }
+
+    .fontSize4 {
+      font-size: 14.5px;
+      font-weight: 300;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      color: #333333;
+    }
+
+    .text-form-id {
+      color: #00a8e8 !important;
+      font-weight: 300;
+    }
+
+    .myCircle {
+      width: 115px;
+      height: 115px;
+      border: 2px solid #808080;
+      border-radius: 50%;
+      margin: 10px auto 20px auto;
+      padding-top: 15px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .myCircle img {
+      width: 44px;
+      height: auto;
+    }
+
+    .myCircle span {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: #666666;
+      display: block;
+    }
+
+    .badge-confirmed {
+      background-color: #9dc664 !important;
+      color: #ffffff;
+      font-size: 11px;
+      padding: 3px 14px;
+      border-radius: 12px;
+      font-weight: 700 !important;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    hr.style-three {
+      border: 0;
+      height: 1px;
+      background-color: #e5e5e5;
+      margin-top: 35px;
+      margin-bottom: 25px;
+    }
+
+    footer#footer {
+      background-color: #ffffff !important;
+      padding: 30px 25px 15px 25px;
+      border-top: 1px solid #e7e7e7;
+      margin-top: 30px;
+    }
+
+    .copyright-bar {
+      background-color: #000000 !important;
+      padding: 14px 0;
+      margin-top: 25px;
+      color: #888888;
+      font-size: 12px;
+    }
+
+    .copyright-bar a.text-white {
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Original Navbar with Dropdown Tabs (Home, News, Help) -->
+  <nav class="navbar navbar-default custom-navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#dma-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dept. of Marine Administration, Myanmar</a>
+      </div>
+
+      <!-- Collapsible Navigation Links -->
+      <div class="collapse navbar-collapse" id="dma-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content Section -->
+  <div class="container-fluid">
+    <div class="verification-section">
+      <div class="row">
+        <div class="col-md-12">
+          <div style="text-align:center;">
+            <p class="fontSize2">Verified successfully.</p>
+            <p class="fontSize3">The following departure information has been verified successfully.</p>
+            
+            <div class="myCircle">
+              <img src="http://www.dmamyanmar.org/Content/Images/right.gif" alt="Success" /><br />
+              <span>Success</span>
+            </div>
+
+            <p class="fontSize4 text-form-id">Form ID: SD/310-Z451837 issued at 08, Jun 2026</p>
+            <p class="fontSize4">Crew information: YE YINT ZAW (CDC No. 152751)</p>
+            <p class="fontSize4">SRPS Company: NAY LA SOE CO., LTD</p>
+            <p class="fontSize4">Vessel name: MV WISDOM, IMO No. 8603248</p>
+            <p class="fontSize4">Rank: DC</p>
+            <p><span class="badge-confirmed">Status: CONFIRMED</span></p>
+            <hr class="style-three" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
+            <h4 style="margin-top:0;">About Department of Marine Adminstration</h4>
+            <p style="font-size:13px; color:#666;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar...</p>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <h4 style="margin-top:0;">Address</h4>
+            <address style="font-size:13px; color:#666;">
+              <strong>Department of Marine Administration</strong><br>
+              Dawbon Dockyard, Dawbon Township, Yangon<br>
+              Email: <a href="mailto:certificate@dma.gov.mm">certificate@dma.gov.mm</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="copyright-bar">
+      <div class="container-fluid" style="padding: 0 15px;">
+        <div class="row">
+          <div class="col-sm-7 col-xs-12">
+            <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
