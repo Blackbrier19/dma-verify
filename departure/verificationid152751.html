@@ -15,7 +15,7 @@
       padding: 0;
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
       color: #333333;
-      background-color: #ffffff !important;
+      background-color: #f4f6f9 !important;
       width: 100%;
       overflow-x: hidden;
     }
@@ -103,10 +103,10 @@
       margin-top: 85px;
     }
 
-    /* Main Verification Section (Light Gray Area) */
+    /* Main Verification Section (Gray Background Zone) */
     .verification-section {
       background-color: #f4f6f9 !important;
-      padding: 40px 15px 0px 15px;
+      padding: 35px 0 0 0;
     }
 
     .fontSize2 {
@@ -167,20 +167,19 @@
       border-radius: 12px;
       font-weight: 700 !important;
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
-    /* Horizontal Line Divider */
+    /* Horizontal Line Divider (Status Label နဲ့ အောက်ခြေ အဖြူရောင် အကွာအဝေး ညီညီ) */
     hr.style-three {
       border: 0;
       height: 1px;
-      background-color: #e2e5ec;
-      margin-top: 35px;
-      margin-bottom: 0px;
+      background-color: #d1d5db;
+      margin: 25px auto 25px auto;
       width: 100%;
     }
 
-    /* Footer Section (White Background) */
+    /* Footer Section (White Background Zone) */
     footer#footer {
       background-color: #ffffff !important;
       padding: 35px 0 25px 0;
@@ -311,13 +310,14 @@
               <p class="fontSize4">SRPS Company: NAY LA SOE CO., LTD</p>
               <p class="fontSize4">Vessel name: MV WISDOM, IMO No. 8603248</p>
               <p class="fontSize4">Rank: DC</p>
-              <p><span class="badge-confirmed">Status: CONFIRMED</span></p>
+              <p style="margin-bottom: 0;"><span class="badge-confirmed">Status: CONFIRMED</span></p>
+
+              <!-- Divider Line between Status & White Section -->
+              <hr class="style-three" />
             </div>
           </div>
         </div>
       </div>
-      <!-- Divider Line between Gray Section & White Footer -->
-      <hr class="style-three" />
     </div>
 
     <!-- About & Address Section (White Background Zone) -->
