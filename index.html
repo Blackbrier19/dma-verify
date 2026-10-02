@@ -20,24 +20,22 @@
       overflow-x: hidden;
     }
 
-    /* Top Navigation Area - Sticky/Fixed Top */
+    /* Fixed Top Navigation Bar Header */
     .custom-header {
       background-color: #1a1a1a !important;
-      padding: 12px 15px 15px 15px;
-      position: fixed; /* Header Bar ကို အသေကပ်ထားခြင်း */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 9999; /* အောက်က စာသားတွေထက် အပေါ်မှာ ပေါ်နေစေရန် */
+      z-index: 9999;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    /* Main Content Wrapper - Header အောက်မရောက်သွားစေရန် margin-top ပေးထားခြင်း */
-    .main-content-wrapper {
-      margin-top: 85px;
+    /* Mobile Header Layout */
+    .mobile-header-inner {
+      padding: 12px 15px 15px 15px;
     }
 
-    /* Menu Toggle Button (Right Top) */
     .custom-toggle-btn {
       float: right;
       background: transparent;
@@ -59,7 +57,6 @@
       margin-bottom: 0;
     }
 
-    /* Title Block */
     .header-title-block {
       clear: both;
       padding-top: 10px;
@@ -75,7 +72,6 @@
       letter-spacing: 0.2px;
     }
 
-    /* Collapsible Slide Menu */
     .mobile-menu-collapse {
       background-color: #1a1a1a;
       border-top: 1px solid #2d2d2d;
@@ -102,7 +98,12 @@
       background-color: #262626;
     }
 
-    /* Verification Content Area */
+    /* Content Wrapper */
+    .main-content-wrapper {
+      margin-top: 85px;
+    }
+
+    /* Verification Section */
     .verification-section {
       background-color: transparent !important;
       padding: 20px 15px 10px 15px;
@@ -208,65 +209,88 @@
       }
     }
 
+    /* Desktop (PC) View Enhancements */
     @media (min-width: 768px) {
       .main-content-wrapper {
-        margin-top: 65px;
+        margin-top: 60px;
       }
-      .custom-header {
+
+      .mobile-header-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 30px;
+        padding: 0 15px;
+        height: 55px;
       }
+
+      .custom-toggle-btn {
+        display: none;
+      }
+
       .header-title-block {
         padding-top: 0;
         clear: none;
       }
-      .custom-toggle-btn {
-        display: none;
+
+      .header-title-text {
+        font-size: 17px;
       }
+
       .mobile-menu-collapse {
         display: block !important;
         background: transparent;
         border: none;
         margin-top: 0;
       }
+
       .mobile-menu-collapse ul {
         display: flex;
+        align-items: center;
       }
+
       .mobile-menu-collapse ul li a {
         border-bottom: none;
-        padding: 0 15px;
+        padding: 15px 18px;
+        font-size: 14px;
+      }
+
+      .mobile-menu-collapse ul li a:hover {
+        background-color: transparent;
+        color: #ffffff;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Fixed Top Navigation Header -->
+  <!-- Header Section -->
   <header class="custom-header">
-    <button type="button" class="custom-toggle-btn collapsed" data-toggle="collapse" data-target="#dmaMenu" aria-expanded="false">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+    <div class="container">
+      <div class="mobile-header-inner">
+        <button type="button" class="custom-toggle-btn collapsed" data-toggle="collapse" data-target="#dmaMenu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-    <div class="header-title-block">
-      <span class="header-title-text">Dept. of Marine Administration, Myanmar</span>
-    </div>
+        <div class="header-title-block">
+          <span class="header-title-text">Dept. of Marine Administration, Myanmar</span>
+        </div>
 
-    <div class="collapse mobile-menu-collapse" id="dmaMenu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
+        <div class="collapse mobile-menu-collapse" id="dmaMenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Main Scrollable Content -->
   <div class="main-content-wrapper">
-    <div class="container-fluid">
+    <div class="container">
       <div class="verification-section">
         <div class="row">
           <div class="col-md-12">
@@ -293,36 +317,34 @@
 
       <!-- About & Address Footer -->
       <footer id="footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
-              <h4 style="margin-top:0; font-weight: 300;">About Department of Marine Adminstration</h4>
-              <p style="font-size:13px; color:#666; font-weight: 300;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar. The present day Department of Marine Administration was founded since the war days in 1930 and called Principal Port Officer.<br><br>This is the officially presentative site for accessing any information related with Myanmar seafarer registration, verification and seafarer related information services.</p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-              <h4 style="margin-top:0; font-weight: 300;">Address</h4>
-              <address style="font-size:13px; color:#666; font-weight: 300;">
-                <strong>Department of Marine Administration</strong><br>
-                Dawbon Dockyard<br>
-                Dawbon Township, Yangon<br>
-                <u>Email:</u> <a href="mailto:certificate@dma.gov.mm" style="color: #00a8e8;">certificate@dma.gov.mm</a>
-              </address>
-            </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
+            <h4 style="margin-top:0; font-weight: 300;">About Department of Marine Adminstration</h4>
+            <p style="font-size:13px; color:#666; font-weight: 300;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar. The present day Department of Marine Administration was founded since the war days in 1930 and called Principal Port Officer.<br><br>This is the officially presentative site for accessing any information related with Myanmar seafarer registration, verification and seafarer related information services.</p>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <h4 style="margin-top:0; font-weight: 300;">Address</h4>
+            <address style="font-size:13px; color:#666; font-weight: 300;">
+              <strong>Department of Marine Administration</strong><br>
+              Dawbon Dockyard<br>
+              Dawbon Township, Yangon<br>
+              <u>Email:</u> <a href="mailto:certificate@dma.gov.mm" style="color: #00a8e8;">certificate@dma.gov.mm</a>
+            </address>
           </div>
         </div>
       </footer>
+    </div>
 
-      <!-- Copyright Bar -->
-      <div class="copyright-bar">
-        <div class="container-fluid" style="padding: 0 15px;">
-          <div class="row">
-            <div class="col-sm-7 col-xs-12">
-              <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>. Developed by Yammobots Co.,Ltd All Rights Reserved.</p>
-            </div>
-            <div class="col-sm-5 col-xs-12 footer-links">
-              <a href="#" class="text-white" style="color:#ffffff;">Privacy Policy</a> &nbsp;&bull;&nbsp; 
-              <a href="#" class="text-white" style="color:#ffffff;">Terms of Service</a>
-            </div>
+    <!-- Copyright Bar -->
+    <div class="copyright-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-xs-12">
+            <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>. Developed by Yammobots Co.,Ltd All Rights Reserved.</p>
+          </div>
+          <div class="col-sm-5 col-xs-12 footer-links">
+            <a href="#" class="text-white" style="color:#ffffff;">Privacy Policy</a> &nbsp;&bull;&nbsp; 
+            <a href="#" class="text-white" style="color:#ffffff;">Terms of Service</a>
           </div>
         </div>
       </div>
