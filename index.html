@@ -20,12 +20,21 @@
       overflow-x: hidden;
     }
 
-    /* Top Navigation Area */
+    /* Top Navigation Area - Sticky/Fixed Top */
     .custom-header {
       background-color: #1a1a1a !important;
       padding: 12px 15px 15px 15px;
-      position: relative;
+      position: fixed; /* Header Bar ကို အသေကပ်ထားခြင်း */
+      top: 0;
+      left: 0;
       width: 100%;
+      z-index: 9999; /* အောက်က စာသားတွေထက် အပေါ်မှာ ပေါ်နေစေရန် */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Main Content Wrapper - Header အောက်မရောက်သွားစေရန် margin-top ပေးထားခြင်း */
+    .main-content-wrapper {
+      margin-top: 85px;
     }
 
     /* Menu Toggle Button (Right Top) */
@@ -50,7 +59,7 @@
       margin-bottom: 0;
     }
 
-    /* Title Block - Large & Below Toggle Button */
+    /* Title Block */
     .header-title-block {
       clear: both;
       padding-top: 10px;
@@ -96,7 +105,7 @@
     /* Verification Content Area */
     .verification-section {
       background-color: transparent !important;
-      padding: 30px 15px 10px 15px;
+      padding: 20px 15px 10px 15px;
     }
 
     .fontSize2 {
@@ -200,6 +209,9 @@
     }
 
     @media (min-width: 768px) {
+      .main-content-wrapper {
+        margin-top: 65px;
+      }
       .custom-header {
         display: flex;
         justify-content: space-between;
@@ -231,7 +243,7 @@
 </head>
 <body>
 
-  <!-- Custom Header matching original DMA Header layout -->
+  <!-- Fixed Top Navigation Header -->
   <header class="custom-header">
     <button type="button" class="custom-toggle-btn collapsed" data-toggle="collapse" data-target="#dmaMenu" aria-expanded="false">
       <span class="icon-bar"></span>
@@ -252,63 +264,65 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="container-fluid">
-    <div class="verification-section">
-      <div class="row">
-        <div class="col-md-12">
-          <div style="text-align:center;">
-            <p class="fontSize2">Verified successfully.</p>
-            <p class="fontSize3">The following departure information has been verified successfully.</p>
-            
-            <div class="myCircle">
-              <img src="http://www.dmamyanmar.org/Content/Images/right.gif" alt="Success" /><br />
-              <span>Success</span>
+  <!-- Main Scrollable Content -->
+  <div class="main-content-wrapper">
+    <div class="container-fluid">
+      <div class="verification-section">
+        <div class="row">
+          <div class="col-md-12">
+            <div style="text-align:center;">
+              <p class="fontSize2">Verified successfully.</p>
+              <p class="fontSize3">The following departure information has been verified successfully.</p>
+              
+              <div class="myCircle">
+                <img src="http://www.dmamyanmar.org/Content/Images/right.gif" alt="Success" /><br />
+                <span>Success</span>
+              </div>
+
+              <p class="fontSize4 text-form-id">Form ID: SD/310-Z451837 issued at 08, Jun 2026</p>
+              <p class="fontSize4">Crew information: YE YINT ZAW (CDC No. 152751)</p>
+              <p class="fontSize4">SRPS Company: NAY LA SOE CO., LTD</p>
+              <p class="fontSize4">Vessel name: MV WISDOM, IMO No. 8603248</p>
+              <p class="fontSize4">Rank: DC</p>
+              <p><span class="badge-confirmed">Status: CONFIRMED</span></p>
+              <hr class="style-three" />
             </div>
-
-            <p class="fontSize4 text-form-id">Form ID: SD/310-Z451837 issued at 08, Jun 2026</p>
-            <p class="fontSize4">Crew information: YE YINT ZAW (CDC No. 152751)</p>
-            <p class="fontSize4">SRPS Company: NAY LA SOE CO., LTD</p>
-            <p class="fontSize4">Vessel name: MV WISDOM, IMO No. 8603248</p>
-            <p class="fontSize4">Rank: DC</p>
-            <p><span class="badge-confirmed">Status: CONFIRMED</span></p>
-            <hr class="style-three" />
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- About & Address Footer -->
-    <footer id="footer">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
-            <h4 style="margin-top:0; font-weight: 300;">About Department of Marine Adminstration</h4>
-            <p style="font-size:13px; color:#666; font-weight: 300;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar. The present day Department of Marine Administration was founded since the war days in 1930 and called Principal Port Officer.<br><br>This is the officially presentative site for accessing any information related with Myanmar seafarer registration, verification and seafarer related information services.</p>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <h4 style="margin-top:0; font-weight: 300;">Address</h4>
-            <address style="font-size:13px; color:#666; font-weight: 300;">
-              <strong>Department of Marine Administration</strong><br>
-              Dawbon Dockyard<br>
-              Dawbon Township, Yangon<br>
-              <u>Email:</u> <a href="mailto:certificate@dma.gov.mm" style="color: #00a8e8;">certificate@dma.gov.mm</a>
-            </address>
+      <!-- About & Address Footer -->
+      <footer id="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
+              <h4 style="margin-top:0; font-weight: 300;">About Department of Marine Adminstration</h4>
+              <p style="font-size:13px; color:#666; font-weight: 300;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar. The present day Department of Marine Administration was founded since the war days in 1930 and called Principal Port Officer.<br><br>This is the officially presentative site for accessing any information related with Myanmar seafarer registration, verification and seafarer related information services.</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <h4 style="margin-top:0; font-weight: 300;">Address</h4>
+              <address style="font-size:13px; color:#666; font-weight: 300;">
+                <strong>Department of Marine Administration</strong><br>
+                Dawbon Dockyard<br>
+                Dawbon Township, Yangon<br>
+                <u>Email:</u> <a href="mailto:certificate@dma.gov.mm" style="color: #00a8e8;">certificate@dma.gov.mm</a>
+              </address>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
-    <!-- Copyright Bar -->
-    <div class="copyright-bar">
-      <div class="container-fluid" style="padding: 0 15px;">
-        <div class="row">
-          <div class="col-sm-7 col-xs-12">
-            <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>. Developed by Yammobots Co.,Ltd All Rights Reserved.</p>
-          </div>
-          <div class="col-sm-5 col-xs-12 footer-links">
-            <a href="#" class="text-white" style="color:#ffffff;">Privacy Policy</a> &nbsp;&bull;&nbsp; 
-            <a href="#" class="text-white" style="color:#ffffff;">Terms of Service</a>
+      <!-- Copyright Bar -->
+      <div class="copyright-bar">
+        <div class="container-fluid" style="padding: 0 15px;">
+          <div class="row">
+            <div class="col-sm-7 col-xs-12">
+              <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>. Developed by Yammobots Co.,Ltd All Rights Reserved.</p>
+            </div>
+            <div class="col-sm-5 col-xs-12 footer-links">
+              <a href="#" class="text-white" style="color:#ffffff;">Privacy Policy</a> &nbsp;&bull;&nbsp; 
+              <a href="#" class="text-white" style="color:#ffffff;">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>
