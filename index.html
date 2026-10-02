@@ -20,7 +20,7 @@
       overflow-x: hidden;
     }
 
-    /* Custom Original Navbar Header Styling */
+    /* Custom Header Bar Styling */
     .custom-navbar {
       background-color: #1a1a1a !important;
       border: none !important;
@@ -31,14 +31,10 @@
 
     .custom-navbar .navbar-brand {
       color: #ffffff !important;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
-      padding: 15px 15px;
+      padding: 15px 20px;
       height: auto;
-      white-space: normal;
-      word-break: break-word;
-      max-width: 80%;
-      display: inline-block;
     }
 
     .custom-navbar .navbar-toggle {
@@ -58,25 +54,25 @@
     .custom-navbar .navbar-nav > li > a {
       color: #cccccc !important;
       font-size: 14px;
-      padding: 12px 20px;
+      padding: 15px 20px;
     }
 
     .custom-navbar .navbar-nav > li > a:hover,
     .custom-navbar .navbar-nav > li > a:focus {
       color: #ffffff !important;
-      background-color: #333333 !important;
+      background-color: transparent !important;
     }
 
-    /* Top Verification Area */
+    /* Verification Content Area */
     .verification-section {
       background-color: transparent !important;
-      padding: 20px 15px 10px 15px;
+      padding: 30px 15px 10px 15px;
     }
 
     .fontSize2 {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 300;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: #333333;
     }
 
@@ -105,7 +101,7 @@
       height: 115px;
       border: 2px solid #808080;
       border-radius: 50%;
-      margin: 10px auto 20px auto;
+      margin: 15px auto 20px auto;
       padding-top: 15px;
       text-align: center;
       background-color: #ffffff;
@@ -142,11 +138,11 @@
       margin-bottom: 25px;
     }
 
+    /* Footer Section */
     footer#footer {
-      background-color: #ffffff !important;
+      background-color: #f4f6f9 !important;
       padding: 30px 25px 15px 25px;
-      border-top: 1px solid #e7e7e7;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .copyright-bar {
@@ -161,11 +157,28 @@
       color: #ffffff !important;
       text-decoration: none;
     }
+
+    .footer-links {
+      text-align: right;
+    }
+
+    @media (max-width: 767px) {
+      .footer-links {
+        text-align: left;
+        margin-top: 10px;
+      }
+      .custom-navbar .navbar-brand {
+        font-size: 13px;
+        max-width: 75%;
+        white-space: normal;
+        word-break: break-word;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Original Navbar with Dropdown Tabs (Home, News, Help) -->
+  <!-- Responsive Navigation Bar -->
   <nav class="navbar navbar-default custom-navbar">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -178,7 +191,7 @@
         <a class="navbar-brand" href="#">Dept. of Marine Administration, Myanmar</a>
       </div>
 
-      <!-- Collapsible Navigation Links -->
+      <!-- Menu Items: PC မှာ ညာဘက်အပေါ်မှာ ပေါ်ပြီး Mobile မှာ ☰ ကိုနှိပ်မှ ပေါ်ပါမည် -->
       <div class="collapse navbar-collapse" id="dma-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Home</a></li>
@@ -189,7 +202,7 @@
     </div>
   </nav>
 
-  <!-- Content Section -->
+  <!-- Main Content -->
   <div class="container-fluid">
     <div class="verification-section">
       <div class="row">
@@ -215,32 +228,37 @@
       </div>
     </div>
 
-    <!-- Footer Section -->
+    <!-- About & Address Footer -->
     <footer id="footer">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
-            <h4 style="margin-top:0;">About Department of Marine Adminstration</h4>
-            <p style="font-size:13px; color:#666;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar...</p>
+            <h4 style="margin-top:0; font-weight: 300;">About Department of Marine Adminstration</h4>
+            <p style="font-size:13px; color:#666; font-weight: 300;">Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar. The present day Department of Marine Administration was founded since the war days in 1930 and called Principal Port Officer.<br><br>This is the officially presentative site for accessing any information related with Myanmar seafarer registration, verification and seafarer related information services.</p>
           </div>
           <div class="col-xs-12 col-md-4">
-            <h4 style="margin-top:0;">Address</h4>
-            <address style="font-size:13px; color:#666;">
+            <h4 style="margin-top:0; font-weight: 300;">Address</h4>
+            <address style="font-size:13px; color:#666; font-weight: 300;">
               <strong>Department of Marine Administration</strong><br>
-              Dawbon Dockyard, Dawbon Township, Yangon<br>
-              Email: <a href="mailto:certificate@dma.gov.mm">certificate@dma.gov.mm</a>
+              Dawbon Dockyard<br>
+              Dawbon Township, Yangon<br>
+              <u>Email:</u> <a href="mailto:certificate@dma.gov.mm" style="color: #00a8e8;">certificate@dma.gov.mm</a>
             </address>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Bottom Copyright Bar -->
+    <!-- Copyright Bar -->
     <div class="copyright-bar">
       <div class="container-fluid" style="padding: 0 15px;">
         <div class="row">
           <div class="col-sm-7 col-xs-12">
-            <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>.</p>
+            <p style="margin:0;">&copy; Copyright 2016 by <a href="#" class="text-white">Department of Marine Administration</a>. Developed by Yammobots Co.,Ltd All Rights Reserved.</p>
+          </div>
+          <div class="col-sm-5 col-xs-12 footer-links">
+            <a href="#" class="text-white" style="color:#ffffff;">Privacy Policy</a> &nbsp;&bull;&nbsp; 
+            <a href="#" class="text-white" style="color:#ffffff;">Terms of Service</a>
           </div>
         </div>
       </div>
