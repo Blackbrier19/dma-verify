@@ -20,7 +20,6 @@
       overflow-x: hidden;
     }
 
-    /* Fixed Top Navigation Bar Header */
     .custom-header {
       background-color: #1a1a1a !important;
       position: fixed;
@@ -31,7 +30,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    /* Mobile Header Layout */
     .mobile-header-inner {
       padding: 12px 15px 15px 15px;
     }
@@ -98,91 +96,36 @@
       background-color: #262626;
     }
 
-    /* Content Wrapper */
     .main-content-wrapper {
-      margin-top: 85px;
+      margin-top: 110px;
     }
 
-    /* Verification Section */
-    .verification-section {
-      background-color: transparent !important;
-      padding: 20px 15px 10px 15px;
-    }
-
-    .fontSize2 {
-      font-size: 26px;
-      font-weight: 300;
-      margin-bottom: 10px;
-      color: #333333;
-    }
-
-    .fontSize3 {
-      font-size: 16px;
-      font-weight: 300;
-      color: #555555;
-      margin-bottom: 25px;
-    }
-
-    .fontSize4 {
-      font-size: 14.5px;
-      font-weight: 300;
-      margin-top: 7px;
-      margin-bottom: 7px;
-      color: #333333;
-    }
-
-    .text-form-id {
-      color: #00a8e8 !important;
-      font-weight: 300;
-    }
-
-    .myCircle {
-      width: 115px;
-      height: 115px;
-      border: 2px solid #808080;
-      border-radius: 50%;
-      margin: 15px auto 20px auto;
-      padding-top: 15px;
-      text-align: center;
+    .home-banner {
       background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 30px;
     }
 
-    .myCircle img {
-      width: 44px;
-      height: auto;
-    }
-
-    .myCircle span {
-      font-size: 12.5px;
+    .home-banner h1 {
+      font-size: 28px;
       font-weight: 300;
-      color: #666666;
-      display: block;
+      color: #1a1a1a;
+      margin-bottom: 15px;
     }
 
-    .badge-confirmed {
-      background-color: #9dc664 !important;
-      color: #ffffff;
-      font-size: 11px;
-      padding: 3px 14px;
-      border-radius: 12px;
-      font-weight: 700 !important;
-      display: inline-block;
-      margin-top: 6px;
+    .home-banner p {
+      font-size: 15px;
+      color: #666;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    hr.style-three {
-      border: 0;
-      height: 1px;
-      background-color: #e5e5e5;
-      margin-top: 35px;
-      margin-bottom: 25px;
-    }
-
-    /* Footer Section */
     footer#footer {
       background-color: #f4f6f9 !important;
       padding: 30px 25px 15px 25px;
-      margin-top: 20px;
     }
 
     .copyright-bar {
@@ -209,10 +152,9 @@
       }
     }
 
-    /* Desktop (PC) View Enhancements */
     @media (min-width: 768px) {
       .main-content-wrapper {
-        margin-top: 60px;
+        margin-top: 80px;
       }
 
       .mobile-header-inner {
@@ -253,17 +195,12 @@
         padding: 15px 18px;
         font-size: 14px;
       }
-
-      .mobile-menu-collapse ul li a:hover {
-        background-color: transparent;
-        color: #ffffff;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- Header Section with Home, News, Help links -->
   <header class="custom-header">
     <div class="container">
       <div class="mobile-header-inner">
@@ -279,7 +216,7 @@
 
         <div class="collapse mobile-menu-collapse" id="dmaMenu">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Help</a></li>
           </ul>
@@ -288,34 +225,14 @@
     </div>
   </header>
 
-  <!-- Main Scrollable Content -->
+  <!-- Main Content Area -->
   <div class="main-content-wrapper">
     <div class="container">
-      <div class="verification-section">
-        <div class="row">
-          <div class="col-md-12">
-            <div style="text-align:center;">
-              <p class="fontSize2">Verified successfully.</p>
-              <p class="fontSize3">The following departure information has been verified successfully.</p>
-              
-              <div class="myCircle">
-                <img src="http://www.dmamyanmar.org/Content/Images/right.gif" alt="Success" /><br />
-                <span>Success</span>
-              </div>
-
-              <p class="fontSize4 text-form-id">Form ID: SD/310-Z451837 issued at 08, Jun 2026</p>
-              <p class="fontSize4">Crew information: YE YINT ZAW (CDC No. 152751)</p>
-              <p class="fontSize4">SRPS Company: NAY LA SOE CO., LTD</p>
-              <p class="fontSize4">Vessel name: MV WISDOM, IMO No. 8603248</p>
-              <p class="fontSize4">Rank: DC</p>
-              <p><span class="badge-confirmed">Status: CONFIRMED</span></p>
-              <hr class="style-three" />
-            </div>
-          </div>
-        </div>
+      <div class="home-banner">
+        <h1>Department of Marine Administration</h1>
+        <p>Welcome to the official portal of Department of Marine Administration, Ministry of Transport, Myanmar.</p>
       </div>
 
-      <!-- About & Address Footer -->
       <footer id="footer">
         <div class="row">
           <div class="col-xs-12 col-md-8" style="margin-bottom: 20px;">
@@ -335,7 +252,6 @@
       </footer>
     </div>
 
-    <!-- Copyright Bar -->
     <div class="copyright-bar">
       <div class="container">
         <div class="row">
