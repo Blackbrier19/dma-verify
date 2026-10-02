@@ -20,47 +20,77 @@
       overflow-x: hidden;
     }
 
-    /* Custom Header Bar Styling */
-    .custom-navbar {
+    /* Top Navigation Area */
+    .custom-header {
       background-color: #1a1a1a !important;
-      border: none !important;
-      border-radius: 0 !important;
-      margin-bottom: 0 !important;
-      min-height: 50px;
+      padding: 12px 15px 15px 15px;
+      position: relative;
+      width: 100%;
     }
 
-    .custom-navbar .navbar-brand {
-      color: #ffffff !important;
-      font-size: 15px;
-      font-weight: 400;
-      padding: 15px 20px;
-      height: auto;
+    /* Menu Toggle Button (Right Top) */
+    .custom-toggle-btn {
+      float: right;
+      background: transparent;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin-top: 0px;
+      cursor: pointer;
     }
 
-    .custom-navbar .navbar-toggle {
-      border-color: #444 !important;
-      margin-right: 15px;
-      margin-top: 8px;
-      margin-bottom: 8px;
-      background-color: transparent;
-    }
-
-    .custom-navbar .navbar-toggle .icon-bar {
-      background-color: #ffffff !important;
+    .custom-toggle-btn .icon-bar {
+      display: block;
       width: 22px;
       height: 2px;
+      background-color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .custom-toggle-btn .icon-bar:last-child {
+      margin-bottom: 0;
     }
 
-    .custom-navbar .navbar-nav > li > a {
-      color: #cccccc !important;
-      font-size: 14px;
-      padding: 15px 20px;
+    /* Title Block - Large & Below Toggle Button */
+    .header-title-block {
+      clear: both;
+      padding-top: 10px;
     }
 
-    .custom-navbar .navbar-nav > li > a:hover,
-    .custom-navbar .navbar-nav > li > a:focus {
-      color: #ffffff !important;
-      background-color: transparent !important;
+    .header-title-text {
+      color: #e0e0e0;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.3;
+      margin: 0;
+      display: block;
+      letter-spacing: 0.2px;
+    }
+
+    /* Collapsible Slide Menu */
+    .mobile-menu-collapse {
+      background-color: #1a1a1a;
+      border-top: 1px solid #2d2d2d;
+      margin-top: 10px;
+    }
+
+    .mobile-menu-collapse ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-menu-collapse ul li a {
+      display: block;
+      padding: 12px 15px;
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 15px;
+      border-bottom: 1px solid #262626;
+    }
+
+    .mobile-menu-collapse ul li a:hover {
+      color: #ffffff;
+      background-color: #262626;
     }
 
     /* Verification Content Area */
@@ -167,40 +197,60 @@
         text-align: left;
         margin-top: 10px;
       }
-      .custom-navbar .navbar-brand {
-        font-size: 13px;
-        max-width: 75%;
-        white-space: normal;
-        word-break: break-word;
+    }
+
+    @media (min-width: 768px) {
+      .custom-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+      }
+      .header-title-block {
+        padding-top: 0;
+        clear: none;
+      }
+      .custom-toggle-btn {
+        display: none;
+      }
+      .mobile-menu-collapse {
+        display: block !important;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+      }
+      .mobile-menu-collapse ul {
+        display: flex;
+      }
+      .mobile-menu-collapse ul li a {
+        border-bottom: none;
+        padding: 0 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Responsive Navigation Bar -->
-  <nav class="navbar navbar-default custom-navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#dma-navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Dept. of Marine Administration, Myanmar</a>
-      </div>
+  <!-- Custom Header matching original DMA Header layout -->
+  <header class="custom-header">
+    <button type="button" class="custom-toggle-btn collapsed" data-toggle="collapse" data-target="#dmaMenu" aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
 
-      <!-- Menu Items: PC မှာ ညာဘက်အပေါ်မှာ ပေါ်ပြီး Mobile မှာ ☰ ကိုနှိပ်မှ ပေါ်ပါမည် -->
-      <div class="collapse navbar-collapse" id="dma-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </div>
+    <div class="header-title-block">
+      <span class="header-title-text">Dept. of Marine Administration, Myanmar</span>
     </div>
-  </nav>
+
+    <div class="collapse mobile-menu-collapse" id="dmaMenu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </header>
 
   <!-- Main Content -->
   <div class="container-fluid">
