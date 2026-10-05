@@ -9,17 +9,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  @font-face {
-  font-family: 'Segoe UI Light Custom';
-  src: url('https://github.com/Blackbrier19/dma-verify/raw/refs/heads/main/departure/segoeuil.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
+  <style>
+    /* Custom Font Definition */
+    @font-face {
+      font-family: 'Segoe UI Light Custom';
+      src: url('https://github.com/Blackbrier19/dma-verify/raw/refs/heads/main/departure/segoeuil.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+    }
 
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
       color: #333333;
       background-color: #f4f6f9 !important;
       width: 100%;
@@ -68,15 +70,16 @@
       padding-top: 10px;
     }
 
+    /* Header Title Text ပြင်ဆင်ချက် (Original Style) */
     .header-title-text {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #e0e0e0;
-      font-size: 15.3px;
-      font-weight: 400;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
+      color: #999999 !important; /* Original ကဲ့သို့ ခပ်မှိန်မှိန် မီးခိုးရောင် */
+      font-size: 18px;            /* Original ဖောင့်အရွယ်အစား */
+      font-weight: 300;           /* Segoe UI Light အထူအပါး */
       line-height: 1.3;
       margin: 0;
       display: block;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
     }
 
     .mobile-menu-collapse {
@@ -92,12 +95,12 @@
     }
 
     .mobile-menu-collapse ul li a {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       display: block;
       padding: 12px 15px;
       color: #cccccc;
-      font-size: 15px;
-      font-weight: 400;
+      font-size: 14px;
+      font-weight: 300;
       text-decoration: none;
       border-bottom: 1px solid #262626;
     }
@@ -119,7 +122,7 @@
     }
 
     .fontSize2 {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 22px;
       font-weight: 300;
       margin-bottom: 10px;
@@ -127,7 +130,7 @@
     }
 
     .fontSize3 {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 17px;
       font-weight: 300;
       color: #555555;
@@ -135,7 +138,7 @@
     }
 
     .fontSize4 {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 14px;
       font-weight: 300;
       margin-top: 10px;
@@ -165,14 +168,13 @@
     }
 
     .myCircle span {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 12.5px;
       font-weight: 300;
       color: #666666;
       display: block;
     }
 
-    /* Updated badge-confirmed class with new styles */
     .badge-confirmed {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #9dc664 !important;
@@ -205,7 +207,7 @@
     }
 
     footer#footer h4 {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 18px;
       font-weight: 300;
       color: #333333;
@@ -213,7 +215,7 @@
     }
 
     footer#footer p, footer#footer address {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 13px;
       font-weight: 300;
       color: #666666;
@@ -228,7 +230,7 @@
     }
 
     footer#footer address a {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       color: #00a8e8;
       text-decoration: none;
     }
@@ -241,7 +243,7 @@
     }
 
     .copyright-bar p {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 12px;
       font-weight: 400;
       color: #888888;
@@ -249,7 +251,7 @@
     }
 
     .copyright-bar a.text-white {
-      font-family: 'Segoe UI Light Custom', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       font-size: 12px;
       font-weight: 400;
       color: #ffffff !important;
@@ -288,6 +290,9 @@
       .header-title-block {
         padding-top: 0;
         clear: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
       }
 
       .mobile-menu-collapse {
