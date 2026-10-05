@@ -76,22 +76,20 @@
     .header-title-block {
       clear: both;
       width: 100%;
-      padding-top: 6px;
+      padding-top: 4px;
     }
 
-    /* Header Title Text (Original Style) */
+    /* Header Title Text (Original Font Size Match) */
     .header-title-text {
       font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
       color: #999999 !important;
-      font-size: 18px;
+      font-size: 13px; /* Mobile မှာ စာလုံးမပြတ်အောင် Size လျှော့ထားသည် */
       font-weight: 300;
       line-height: 1.3;
       margin: 0;
       display: block;
-      letter-spacing: 0.2px;
+      letter-spacing: -0.2px;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     .mobile-menu-collapse {
@@ -124,7 +122,7 @@
 
     /* Content Wrapper */
     .main-content-wrapper {
-      margin-top: 85px;
+      margin-top: 80px;
     }
 
     /* Main Verification Section (Gray Background Zone) */
@@ -306,6 +304,10 @@
         display: flex;
         align-items: center;
         height: 100%;
+      }
+
+      .header-title-text {
+        font-size: 18px; /* Desktop အတွက် Font Size */
       }
 
       .mobile-menu-collapse {
