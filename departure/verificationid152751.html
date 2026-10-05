@@ -41,16 +41,22 @@
 
     /* Mobile Header Layout */
     .mobile-header-inner {
-      padding: 12px 15px 15px 15px;
+      position: relative;
+      padding: 12px 15px;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
     }
 
     .custom-toggle-btn {
-      float: right;
+      position: absolute;
+      right: 15px;
+      top: 8px;
       background: transparent;
       border: 1px solid #444;
       border-radius: 4px;
-      padding: 8px 10px;
-      margin-top: 0px;
+      padding: 6px 9px;
+      margin: 0;
       cursor: pointer;
     }
 
@@ -66,26 +72,29 @@
     }
 
     .header-title-block {
-      clear: both;
-      padding-top: 10px;
+      padding-right: 50px; /* Toggle button အတွက် နေရာချန်ထားခြင်း */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Header Title Text ပြင်ဆင်ချက် (Original Style) */
+    /* Header Title Text ပြင်ဆင်ချက် (One line / Original Style) */
     .header-title-text {
       font-family: 'Segoe UI Light Custom', 'Segoe UI Light', 'Segoe UI', sans-serif;
-      color: #999999 !important; /* Original ကဲ့သို့ ခပ်မှိန်မှိန် မီးခိုးရောင် */
-      font-size: 18px;            /* Original ဖောင့်အရွယ်အစား */
-      font-weight: 300;           /* Segoe UI Light အထူအပါး */
-      line-height: 1.3;
+      color: #999999 !important;
+      font-size: 16px;            /* Mobile တွင် တစ်ကြောင်းတည်းဆန့်စေရန် Size ညှိထားပါသည် */
+      font-weight: 300;
+      line-height: 1.2;
       margin: 0;
       display: block;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
     }
 
     .mobile-menu-collapse {
       background-color: #1a1a1a;
       border-top: 1px solid #2d2d2d;
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     .mobile-menu-collapse ul {
@@ -112,7 +121,7 @@
 
     /* Content Wrapper */
     .main-content-wrapper {
-      margin-top: 85px;
+      margin-top: 55px;
     }
 
     /* Main Verification Section (Gray Background Zone) */
@@ -288,11 +297,14 @@
       }
 
       .header-title-block {
-        padding-top: 0;
-        clear: none;
+        padding-right: 0;
         display: flex;
         align-items: center;
         height: 100%;
+      }
+
+      .header-title-text {
+        font-size: 18px; /* Desktop တွင် ဖောင့်အကြီးအတိုင်း ပြန်ထားပါသည် */
       }
 
       .mobile-menu-collapse {
@@ -325,15 +337,15 @@
   <header class="custom-header">
     <div class="container">
       <div class="mobile-header-inner">
+        <div class="header-title-block">
+          <span class="header-title-text">Dept. of Marine Administration, Myanmar</span>
+        </div>
+
         <button type="button" class="custom-toggle-btn collapsed" data-toggle="collapse" data-target="#dmaMenu" aria-expanded="false">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
-        <div class="header-title-block">
-          <span class="header-title-text">Dept. of Marine Administration, Myanmar</span>
-        </div>
 
         <div class="collapse mobile-menu-collapse" id="dmaMenu">
           <ul>
